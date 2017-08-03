@@ -19,8 +19,6 @@ def post_create(request):
 
 		return HttpResponseRedirect(instance.get_absolute_url())
 
-	else:
-		messages.error(request, "Not Successfully Created")
 	context = {
 		"form": form,
 
@@ -43,7 +41,7 @@ def post_list(request):
 		"title":"My User List"
 	}
 
-	return render(request, "index.html", context)
+	return render(request, "post_list.html", context)
 
 def post_update(request , id=None):
 	instance = get_object_or_404(Post, id = id)
