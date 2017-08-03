@@ -23,16 +23,7 @@
 			"file": "src/posts/views.py",
 			"settings":
 			{
-				"buffer_size": 441,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/trydjango19/settings.py",
-			"settings":
-			{
-				"buffer_size": 3226,
+				"buffer_size": 676,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -41,7 +32,7 @@
 			"file": "src/templates/index.html",
 			"settings":
 			{
-				"buffer_size": 117,
+				"buffer_size": 304,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -53,6 +44,15 @@
 				"buffer_size": 396,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/posts/admin.py",
+			"settings":
+			{
+				"buffer_size": 386,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -90,15 +90,16 @@
 	[
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src",
+		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/templates",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/trydjango19"
 	],
 	"file_history":
 	[
+		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/trydjango19/settings.py",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/trydjango19/urls.py",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/views.py",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/urls.py",
-		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/trydjango19/settings.py",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/models.py",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/admin.py",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/crud.md"
@@ -145,15 +146,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 441,
+						"buffer_size": 676,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								73,
-								73
+								285,
+								285
 							]
 						],
 						"settings":
@@ -169,49 +170,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/trydjango19/settings.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3226,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1750,
-								1750
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 858.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "src/templates/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 117,
+						"buffer_size": 304,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								23,
-								23
+								15,
+								15
 							]
 						],
 						"settings":
@@ -226,7 +197,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "src/posts/urls.py",
 					"semi_transient": false,
 					"settings":
@@ -238,8 +209,36 @@
 						"selection":
 						[
 							[
-								309,
-								309
+								194,
+								194
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/posts/admin.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 386,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								122,
+								122
 							]
 						],
 						"settings":
