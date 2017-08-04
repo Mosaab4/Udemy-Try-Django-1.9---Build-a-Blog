@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"share",
+				"share_string"
+			],
+			[
+				"sha",
+				"shareArticle"
+			],
+			[
+				"sl",
+				"slug"
+			],
+			[
+				"pre",
+				"pre_save_post_reciever"
+			],
+			[
+				"fil",
+				"filename"
+			],
+			[
+				"up",
+				"upload_location"
+			],
+			[
+				"h",
+				"height_field"
+			],
+			[
 				"url",
 				"urlpatterns"
 			],
@@ -44,28 +72,10 @@
 	"buffers":
 	[
 		{
-			"file": "src/templates/post_detail.html",
+			"file": "src/posts/templatetags/urlify.py",
 			"settings":
 			{
-				"buffer_size": 310,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/templates/post_list.html",
-			"settings":
-			{
-				"buffer_size": 753,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/templates/post_form.html",
-			"settings":
-			{
-				"buffer_size": 290,
+				"buffer_size": 157,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -105,22 +115,27 @@
 	[
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src",
-		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/templates"
+		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts",
+		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/templatetags",
+		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/tcl"
 	],
 	"file_history":
 	[
+		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/templates/post_detail.html",
+		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/templatetags/__init__.py",
+		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/templatetags/.py",
+		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/views.py",
+		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/urls.py",
+		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/models.py",
+		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/db.sqlite3",
+		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/templates/post_list.html",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/trydjango19/urls.py",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/trydjango19/settings.py",
+		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/forms.py",
+		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/templates/post_form.html",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/templates/base.html",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/static/css/base.css",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/templates/messages_display.html",
-		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/views.py",
-		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/templates/post_list.html",
-		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/templates/post_form.html",
-		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/templates/post_detail.html",
-		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/urls.py",
-		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/models.py",
-		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/forms.py",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/.gitignore",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/templates/index.html",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/admin.py",
@@ -128,7 +143,7 @@
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -142,6 +157,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"20Free",
 			"from",
 			" %}</"
 		],
@@ -161,57 +177,29 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/templates/post_detail.html",
+					"file": "src/posts/templatetags/urlify.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 310,
+						"buffer_size": 157,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								163,
-								139
+								112,
+								112
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/templates/post_list.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 753,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								441,
-								441
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -219,41 +207,13 @@
 					},
 					"stack_index": 0,
 					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/templates/post_form.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 290,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								217,
-								217
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -290,7 +250,7 @@
 	"project": "trydjango19.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
