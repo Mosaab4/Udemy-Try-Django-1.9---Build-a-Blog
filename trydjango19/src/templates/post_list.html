@@ -15,6 +15,15 @@
 	    					{% endif %}
 				    		<!-- <img src="..." alt="..."> -->
 	      					<div class="caption">
+								
+								{% if object.draft %}
+								  	<h3 style="color:red;">Staf Only : Draft</h3>
+									{% if object.publish > today %}
+										<h3>Staf Only : Future Post</h3>
+									{% endif %}
+									
+								{% endif %}
+
 	        					<h3><a href="{{ object.get_absolute_url }}">{{ object.title }}</a> <small>{{ object.publish}}</small></h3>
 								{% if object.user.get_full_name %}
 									<p>Author: {{ object.user.get_full_name }}</p>

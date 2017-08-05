@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.http import HttpResponse , HttpResponseRedirect ,Http404
 from django.shortcuts import render , get_object_or_404 , redirect
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from datetime import timezone
+from django.utils import timezone
 
 
 
@@ -39,6 +41,10 @@ def post_create(request):
 def post_detail(request , slug=None): #read
 	instance = get_object_or_404(Post,slug=	slug)
 
+	if instance.draft or instance.publish > timezone.now.date():
+		if not request.user.is_staff or not request.user.is_superuser:
+			raise Http404
+
 	share_string = quote_plus(instance.content)
 
 	context = {
@@ -49,7 +55,13 @@ def post_detail(request , slug=None): #read
 	return render(request, "post_detail.html", context)
 
 def post_list(request):
-	queryset_list = Post.objects.all()#.order_by("-timestamp")
+	today = timezone.now().date()
+
+	queryset_list = Post.objects.active()#filter(draft=False).filter(publish=timezone.now())#.order_by("-timestamp")
+
+	if request.user.is_staff or request.user.is_superuser :
+		queryset_list = Post.objects.all()
+
 
 	paginator = Paginator(queryset_list, 5) # Show 25 contacts per page
 
@@ -65,7 +77,8 @@ def post_list(request):
 
 	context = {
 		"object_list" : queryset,
-		"title":"My User List"
+		"title":"List",
+		"today": today,
 	}
 
 	return render(request, "post_list.html", context)
