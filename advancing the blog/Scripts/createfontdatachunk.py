@@ -1,4 +1,4 @@
-#!e:\codes\try django 1.9 -   build a blog\trydjango19\scripts\python.exe
+#!e:\codes\try django 1.9 -   build a blog\blog\scripts\python.exe
 from __future__ import print_function
 import base64
 import os

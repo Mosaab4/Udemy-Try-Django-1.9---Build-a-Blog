@@ -71,15 +71,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "src/posts/templatetags/urlify.py",
-			"settings":
-			{
-				"buffer_size": 157,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -113,7 +104,6 @@
 	},
 	"expanded_folders":
 	[
-		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/templatetags",
@@ -121,6 +111,7 @@
 	],
 	"file_history":
 	[
+		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/templatetags/urlify.py",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/templates/post_detail.html",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/templatetags/__init__.py",
 		"/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19/src/posts/templatetags/.py",
@@ -143,7 +134,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -177,37 +168,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "src/posts/templatetags/urlify.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 157,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								112,
-								112
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

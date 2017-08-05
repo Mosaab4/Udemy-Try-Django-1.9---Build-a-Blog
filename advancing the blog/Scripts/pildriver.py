@@ -1,4 +1,4 @@
-#!e:\codes\try django 1.9 -   build a blog\trydjango19\scripts\python.exe
+#!e:\codes\try django 1.9 -   build a blog\blog\scripts\python.exe
 """PILdriver, an image-processing calculator using PIL.
 
 An instance of class PILDriver is essentially a software stack machine

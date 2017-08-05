@@ -40,7 +40,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="$(if [ "$OSTYPE" "==" "cygwin" ]; then cygpath -u 'E:\Codes\Try Django 1.9 -   Build a Blog\trydjango19'; else echo '/E/Codes/Try Django 1.9 -   Build a Blog/trydjango19'; fi;)"
+VIRTUAL_ENV="$(if [ "$OSTYPE" "==" "cygwin" ]; then cygpath -u 'E:\Codes\Try Django 1.9 -   Build a Blog\blog'; else echo '/E/Codes/Try Django 1.9 -   Build a Blog/blog'; fi;)"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
