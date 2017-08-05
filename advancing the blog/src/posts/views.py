@@ -42,7 +42,7 @@ def post_create(request):
 def post_detail(request , slug=None): #read
 	instance = get_object_or_404(Post,slug=	slug)
 
-	if instance.draft or instance.publish > timezone.now.date():
+	if instance.draft or instance.publish > timezone.now().date():
 		if not request.user.is_staff or not request.user.is_superuser:
 			raise Http404
 
