@@ -1,4 +1,4 @@
-#!e:\codes\try django 1.9 -   build a blog\blog\scripts\python.exe
+#!e:\codes\try django 1.9 -   build a blog\advancing the blog\scripts\python.exe
 #
 # The Python Imaging Library
 # $Id$
