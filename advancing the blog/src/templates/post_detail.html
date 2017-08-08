@@ -44,19 +44,20 @@
 				
 				<div class="post-detail-item">{{ instance.get_markdown }}<br></div>
 
+
+
 				<hr>
 				<br>
 
 				<div>
 					<p class="lead">Comments</p>
+					<hr>
 					{% for comment in comments %}
-						{{ comment.content_object }}
-					  	<div class="">
-							  {{ comment.content }}
-							  <br>
-							  <small>{{ comment.user }} | {{ comment.timestamp | timesince }} ago</small>
-							  <hr>
-						  </div>
+						<blockquote>
+  							<p>{{ comment.content }}</p>
+  							<footer>via {{ comment.user }} | {{ comment.timestamp | timesince }} ago</footer>
+						</blockquote>
+						<hr>
 					{% endfor %}
 				</div>
 
