@@ -7,6 +7,11 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from datetime import timezone
 from django.utils import timezone
 
+from django.contrib.contenttypes.models import ContentType
+
+
+from comments.models import Comment
+
 
 
 from .forms import PostForm
@@ -48,10 +53,15 @@ def post_detail(request , slug=None): #read
 
 	share_string = quote_plus(instance.content)
 
+	content_type = ContentType.objects.get_for_model(Post)
+	obj_id = instance.id
+	comments = Comment.objects.filter(content_type=content_type, object_id=obj_id)
+
 	context = {
 		"title":instance.title,
 		"instance": instance,
 		"share_string":share_string,
+		"comments": comments,
 	}
 	return render(request, "post_detail.html", context)
 
