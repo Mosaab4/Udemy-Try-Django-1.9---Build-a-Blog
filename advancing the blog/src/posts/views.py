@@ -6,11 +6,12 @@ from django.shortcuts import render , get_object_or_404 , redirect
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from datetime import timezone
 from django.utils import timezone
-
+from django.contrib.contenttypes.models import ContentType
 
 
 
 from comments.models import Comment
+from comments.forms import CommentForm
 
 
 
@@ -53,6 +54,25 @@ def post_detail(request , slug=None): #read
 
 	share_string = quote_plus(instance.content)
 
+	initial_data = {
+		"content_type":instance.get_content_type,
+		"object_id":instance.id,
+	}
+	form = CommentForm(request.POST or None, initial=initial_data)
+
+	if form.is_valid():
+		print(form.cleaned_data)
+		c_type = form.cleaned_data.get("content_type")
+		content_type = ContentType.objects.get(model=c_type)
+		obj_id = form.cleaned_data.get("object_id")
+		content_data = form.cleaned_data.get("content")
+
+		new_comment , created = Comment.objects.get_or_create(
+			user=request.user,
+			content_type = content_type,
+			object_id = obj_id,
+			content = content_data
+		)
 
 	# comments = Comment.objects.filter_by_instance(instance)
 	comments = instance.comments
@@ -62,6 +82,7 @@ def post_detail(request , slug=None): #read
 		"instance": instance,
 		"share_string":share_string,
 		"comments": comments,
+		"comment_form": form,
 	}
 	return render(request, "post_detail.html", context)
 
