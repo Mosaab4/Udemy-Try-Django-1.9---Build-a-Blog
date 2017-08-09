@@ -19,6 +19,11 @@
 			</small>
 		</h1>
 
+		<!--<p>Read time: {% if instance.read_time|time:'i' <= '01' %}< 1 minute {% elif instance.read_time|time:'i' < '10' %}{% else %}{{ instance.read_time | time:'i' }} minutes {% endif %}</p>-->
+
+		<p>Read time: {% if instance.read_time <= 1 %}< 1 minute {% elif instance.read_time < 10 %}{% else %}{{ instance.read_time }} minutes {% endif %}</p>
+
+
 		{% if instance.user.get_full_name %}
 			<p>Author: {{ instance.user.get_full_name }}</p>
 		{% endif %}		
