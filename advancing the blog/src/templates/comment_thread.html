@@ -22,12 +22,16 @@
 						</blockquote>
 					{% endfor %}
 
-					<form method="POST" action=".">
-						{% csrf_token %}
-						{{ form | crispy }}
-						<input type="hidden" name="parent_id" value="{{ comment.id }}">
-						<input type="submit" value="Reply" class="btn 	btn-default">
-					</form>
+					{% if request.user.is_authenticated %}
+						<form method="POST" action=".">
+							{% csrf_token %}
+							{{ form | crispy }}
+							<input type="hidden" name="parent_id" value="{{ comment.id }}">
+							<input type="submit" value="Reply" class="btn 	btn-default">
+						</form>					
+					{% else %}
+						<p>You must Log in to comment</p>
+					{% endif %}
 				</div>
 
 			</blockquote>

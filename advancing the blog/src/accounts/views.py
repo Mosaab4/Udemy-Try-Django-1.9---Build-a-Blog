@@ -12,6 +12,7 @@ from .forms import UserLoginForm, UserRegisterForm
 
 def login_view(request):
     print(request.user.is_authenticated())
+    next = request.GET.get('next')
     title = "login"
     form = UserLoginForm(request.POST or None)
 
@@ -21,6 +22,9 @@ def login_view(request):
 
         user = authenticate(username=username, password=password)
         login(request, user)
+
+        if next :
+            return redirect(next)
 
         print(request.user.is_authenticated())
 
@@ -34,6 +38,7 @@ def login_view(request):
 
 
 def register_view(request):
+    next = request.GET.get('next')
     title = "Register"
     form = UserRegisterForm(request.POST or None)
 
@@ -45,6 +50,9 @@ def register_view(request):
 
         new_user = authenticate(username=user.username, password=password)
         login(request , new_user)
+
+        if next :
+            return redirect(next)
 
         return redirect("/")
 

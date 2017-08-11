@@ -62,7 +62,7 @@ def post_detail(request , slug=None): #read
 	}
 	form = CommentForm(request.POST or None, initial=initial_data)
 
-	if form.is_valid():
+	if form.is_valid() and request.user.is_authenticated():
 		print(form.cleaned_data)
 		c_type = form.cleaned_data.get("content_type")
 		content_type = ContentType.objects.get(model=c_type)
@@ -108,8 +108,8 @@ def post_list(request):
 
 	queryset_list = Post.objects.active()#filter(draft=False).filter(publish=timezone.now())#.order_by("-timestamp")
 
-	if request.user.is_staff or request.user.is_superuser :
-		queryset_list = Post.objects.all()
+	# if request.user.is_staff or request.user.is_superuser :
+	queryset_list = Post.objects.all()
 
 	query = request.GET.get("q")
 	if query:
