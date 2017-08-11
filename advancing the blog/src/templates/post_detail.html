@@ -4,6 +4,10 @@
 
 {% block head_title %}{{ instance.title }} | {{ block.super }}{% endblock %}
 
+{% block post_detail_link %}
+	<li><a href="{{ instance.get_absolute_url }}"></a>{{ instance.title }}</li>
+{% endblock post_detail_link %}
+
 
 {% block content %}
 	<div class="col-sm-6 col-sm-offset-3">
