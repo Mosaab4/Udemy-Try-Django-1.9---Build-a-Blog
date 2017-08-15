@@ -1,21 +1,10 @@
-blog api/include/
-blog api/lib/
-blog api/Scripts/
-blog api/tcl/
+include/
+lib/
+Scripts/
+tcl/
+
 blog api/pip-selfcheck.json
-
-
-advancing the blog/include/
-advancing the blog/lib/
-advancing the blog/Scripts/
-advancing the blog/tcl/
-advancing the blog/media_cdn
 advancing the blog/pip-selfcheck.json
-
-
-trydjango19/include/
-trydjango19/lib/
-trydjango19/Scripts/
-trydjango19/tcl/
-trydjango19/media_cdn/
 trydjango19/pip-selfcheck.json
+
+.vscode/
