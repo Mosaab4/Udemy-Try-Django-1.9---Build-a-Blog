@@ -132,8 +132,17 @@ def post_list(request):
         # If page is out of range (e.g. 9999), deliver last page of results.
 		queryset = paginator.page(paginator.num_pages)
 
+	index = queryset.number -1
+	max_index = len(paginator.page_range)
+	start_index = index - 5 if index <= max_index - 5 else 0
+	end_index = index + 5 if index <= max_index - 5 else max_index
+	page_range = paginator.page_range[start_index:end_index]
+
+
 	context = {
 		"object_list" : queryset,
+		"queryset":queryset,
+		"page_range": page_range,
 		"title":"List",
 		"today": today,
 	}

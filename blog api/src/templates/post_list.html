@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 
+
+
+
 {% block content%}
 
 	
@@ -49,8 +52,9 @@
 	  			<hr>
 	  		</div>
 		{% endfor %}
+		{% include "pagination.html" %}
 
-		<div class="pagination">
+		<!--<div class="pagination">
     		<span class="step-links">
         		{% if object_list.has_previous %}
             		<a href="?page={{ object_list.previous_page_number }}{% if request.GET.q %}&{{ request.GET.q}}{% endif %}">previous</a>
@@ -64,7 +68,9 @@
 			        <a href="?page={{ object_list.next_page_number }}{% if request.GET.q %}&{{ request.GET.q}}{% endif %}">next</a>
         		{% endif %}
     		</span>
-		</div>
+		</div>-->
+
+
 
 
 		
