@@ -30,12 +30,13 @@ from posts.api.pagination import (
     PostPageNumberPagination
 )
 
-from .serializers import CommentSerializer
+from .serializers import CommentSerializer, CommentDetailSerializer
 
 
 class CommentDetailAPIView(RetrieveAPIView):
     queryset = Comment.objects.all()
-    serializer_class = CommentSerializer
+    serializer_class = CommentDetailSerializer
+    lookup_field = 'pk'
 
 
 class CommentListAPTView(ListAPIView):

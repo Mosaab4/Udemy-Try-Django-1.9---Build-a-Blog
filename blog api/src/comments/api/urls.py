@@ -9,7 +9,7 @@ from .views import (
 
 urlpatterns = [
     url(r'^$', CommentListAPTView.as_view(), name='list'),
-    url(r'^(?P<id>\d+)/$' , CommentDetailAPIView.as_view() , name='thread')
+    url(r'^(?P<pk>\d+)/$' , CommentDetailAPIView.as_view() , name='thread')
 ]
 
 
